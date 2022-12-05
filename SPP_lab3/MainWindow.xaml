@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <Menu x:Name="menu" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <MenuItem Header="File">
-                <MenuItem Name="menuItem_Open"  Header="Open" ></MenuItem>
+                <MenuItem Name="menuItem_Open"  Header="Open" Command="Open" ></MenuItem>
             </MenuItem>
         </Menu>
 
