@@ -44,6 +44,7 @@
     <Compile Include="AssemblyBrowser.cs" />
     <Compile Include="AssemblyLoader.cs" />
     <Compile Include="Attributes\Method.cs" />
+    <Compile Include="Attributes\Property.cs" />
     <Compile Include="ExportedNsInfo.cs" />
     <Compile Include="ExportedTypeInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

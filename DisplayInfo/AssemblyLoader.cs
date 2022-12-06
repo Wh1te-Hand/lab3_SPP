@@ -17,8 +17,8 @@ namespace DisplayInfo
             var exportedNsTypes = new List<ExportedTypeInfo>();
             foreach (var exportedType in assembly.ExportedTypes)
             {
-/*                var fields = GetTypeFields(exportedType);
-                var properties = GetTypeProperties(exportedType);*/
+                /*                var fields = GetTypeFields(exportedType);*/
+                var properties = GetTypeProperties(exportedType);
                 var methods = GetTypeMethods(exportedType);
 
                 if (exportedNamespaces.ContainsKey(exportedType.Namespace))
@@ -27,8 +27,8 @@ namespace DisplayInfo
                         new ExportedTypeInfo(
                             exportedType.FullName,
                             exportedType.Attributes.ToString(),
-/*                            fields,
-                            properties,*/
+                            /*                            fields,*/
+                            properties,
                             methods
                             )
                         );
@@ -43,8 +43,8 @@ namespace DisplayInfo
                                 new ExportedTypeInfo(
                                     exportedType.FullName,
                                     exportedType.Attributes.ToString(),/*
-                                    fields,
-                                    properties,*/
+                                    fields,*/
+                                    properties,
                                     methods
                                     )
                                 }
@@ -58,22 +58,23 @@ namespace DisplayInfo
 
 
 
-       /* private static List<Field> GetTypeFields(Type exportedType)
-        {
-            var fields = new List<Field>();
-            string name;
-            string type;
-            string attributes;
-            foreach (var field in exportedType.GetRuntimeFields())
-            {
-                name = field.Name;
-                attributes = field.Attributes.ToString();
-                type = field.FieldType.Name;
-                fields.Add(new Field(name, attributes, type));
-            }
+        /* private static List<Field> GetTypeFields(Type exportedType)
+         {
+             var fields = new List<Field>();
+             string name;
+             string type;
+             string attributes;
+             foreach (var field in exportedType.GetRuntimeFields())
+             {
+                 name = field.Name;
+                 attributes = field.Attributes.ToString();
+                 type = field.FieldType.Name;
+                 fields.Add(new Field(name, attributes, type));
+             }
 
-            return fields;
-        }
+             return fields;
+         }*/
+
 
 
 
@@ -92,8 +93,7 @@ namespace DisplayInfo
             }
 
             return properties;
-        }*/
-
+        }
 
 
         private static List<Method> GetTypeMethods(Type exportedType)
