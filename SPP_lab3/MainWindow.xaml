@@ -16,7 +16,13 @@
                 <MenuItem Name="menuItem_Open"  Header="Open" Command="Open" ></MenuItem>
             </MenuItem>
         </Menu>
-
+        <TreeView x:Name="treeView1"  ItemsSource="{Binding Nodes}" Margin="0,17,0,0.5" Grid.ColumnSpan="2">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Nodes}">
+                    <TextBlock Text="{Binding Name}" />
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
         
     </Grid>
 </Window>
