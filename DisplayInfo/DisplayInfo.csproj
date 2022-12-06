@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AssemblyBrowser.cs" />
     <Compile Include="AssemblyLoader.cs" />
+    <Compile Include="Attributes\Field.cs" />
     <Compile Include="Attributes\Method.cs" />
     <Compile Include="Attributes\Property.cs" />
     <Compile Include="ExportedNsInfo.cs" />

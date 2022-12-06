@@ -70,10 +70,10 @@ namespace WindowHandler
         private ObservableCollection<TreeView> TypeMembersToObservableCollection(ExportedTypeInfo type)
         {
             var collection = new ObservableCollection<TreeView>();
-            /*            foreach (var field in type.Fields)
-                        {
-                            collection.Add(new TreeNode(field.ToString()));
-                        }*/
+            foreach (var field in type.Fields)
+            {
+                collection.Add(new TreeView(field.ToString()));
+            }
 
             foreach (var property in type.Properties)
             {
